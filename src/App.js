@@ -1,5 +1,5 @@
 import './App.css';
-import { ReactRouteDomFile } from './component/routerFolder/ReactRouteDomFile';
+import { NavBar } from './component/navBar';
 
 function App() {
 	return (
@@ -7,7 +7,7 @@ function App() {
 			<div className="row text-center">
 				<h1>INDEX PAGE</h1>
 			</div>
-			<ReactRouteDomFile/>
+			<NavBar/>
 		</div>
 	);
 }

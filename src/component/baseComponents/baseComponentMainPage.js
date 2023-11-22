@@ -4,11 +4,11 @@ import { CreateingUseState, UsinngUseEfffect } from "./react-hooks"
 import { AllFormFieldGetSetData } from './formComponentOne';
 import { AddNewRow } from "./formComponentTwo";
 import { FunctionComponentLifeCycle } from "./life-cycle-function-component";
-import Rahul from "./higherOrderComponent/rahul";
-import Sonam from "./higherOrderComponent/sonam";
-import { Counter } from "../features/counter/counter";
+import Rahul from "../higherOrderComponent/rahul";
+import Sonam from "../higherOrderComponent/sonam";
+import { Counter } from "../../features/counter/counter";
 
-export const Home = () => {
+export const BaseComponentMainPage = () => {
     return (
         <div className="container">
 
