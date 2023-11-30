@@ -5,6 +5,7 @@ import HomePage from "./homePage";
 import AboutPage from "./aboutPage";
 import ContactPage from "./contactPage";
 import PageNotFound from "./pageNotFound";
+import {BaseComponentMainPageTwo} from "./baseComponents/baseComponentMainPageTwo"
 // import { Router } from "react-router-dom/cjs/react-router-dom.min";
 
 export const NavBar = () => {
@@ -30,7 +31,10 @@ export const NavBar = () => {
 								<NavLink className="nav-link" exact to="/contact" activeStyle={{ fontWeight: "bold", color: "red" }}>CONTACT</NavLink>
 							</li>
 							<li className="nav-item active">
-								<NavLink className="nav-link" exact to="/allFunctionality" activeStyle={{ fontWeight: "bold", color: "red" }}>ALL FUNCTIONALITY</NavLink>
+								<NavLink className="nav-link" exact to="/allFunctionality" activeStyle={{ fontWeight: "bold", color: "red" }}>TEST 1</NavLink>
+							</li>
+							<li className="nav-item active">
+								<NavLink className="nav-link" exact to="/test2" activeStyle={{ fontWeight: "bold", color: "red" }}>TEST 2</NavLink>
 							</li>
 						</ul>
 					</div>
@@ -42,6 +46,7 @@ export const NavBar = () => {
 						<ContactPage nameProps="test for contact page" />
 					</Route>
 					<Route exact path="/allFunctionality" component={BaseComponentMainPage} />
+					<Route exact path="/test2" component={BaseComponentMainPageTwo}/>
 					<Route component={PageNotFound} />
 				</Switch>
 			</BrowserRouter>

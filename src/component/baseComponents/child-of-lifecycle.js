@@ -95,3 +95,80 @@ export class UnmountMethod extends Component{
         )
     }
 }
+
+
+
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+// ===================================================================================================================
+
+
+export class UpdatingLyfeCycleTest2 extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            roll:this.props.roll
+        }
+    }
+
+
+    // getDerivedStateFromProps carry props and value, we used this because while props value updated by parent omponent in state is not updated mean this.state.roll is not showing update value, by using getDerivedStateFromProps we update the state.
+
+    // getDerivedStateFromProps generally used for update the state using props value, because you can't directly update the state value while props value is updated
+
+    static getDerivedStateFromProps(props, state){
+        console.log("static getDerivedStateFromProps called");
+        // console.log(props, state);
+        if(props.roll !== state.roll){
+            return {roll:props.roll}
+        }
+        return null;
+    }
+
+
+    // it helps you to render component after update the state/props, if u want to render then return true else return false
+    // it run before render method
+    shouldComponentUpdate(nextProps, nextState){
+        console.log("shouldComponentUpdate called before render");
+        // console.log(" nextProps=> ",nextProps," nextState=> ",nextState );
+        if(nextState.roll < 107){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    // it run before just before update
+    getSnapshotBeforeUpdate(pervProps, prevState){
+        console.log("getSnapshotBeforeUpdate called");
+        console.log(" pervProps=> ",pervProps," prevState=> ",prevState )
+        return 45;
+    }
+
+    // it run before just after update
+    componentDidUpdate(pervProps, prevState, snapshot){
+        console.log("componentDidUpdate called");
+        console.log(" pervProps=> ",pervProps," prevState=> ",prevState," snapshot=> ",snapshot )
+    }
+
+    render(){
+        console.log("render called");
+        return(
+            <>
+                hi i am UpdatingLyfeCycleTest2, and my roll number is {this.state.roll}
+            </>
+        )
+    }
+}
