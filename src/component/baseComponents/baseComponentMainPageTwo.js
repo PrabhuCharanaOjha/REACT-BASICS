@@ -1,6 +1,6 @@
 import {createContext, useState} from 'react'
 import {ThisIsTheClassComponent, ThisIsClassComponentWithProps, ThisIsClassComponentStateWithOutConstructor, ThisIsClassComponentStateWithConstructor, ThisIsClassComponentWithButtonClickEvent, ThisIsFunctionalComponent, ThisIsArrowFunctionComponent, LiftingStateUpExample, LifeCycleMethodMounting, LifeCycleMethodUpdating, LifeCycleMethodUnmountingOne, ArrowFunctionWithUseEffet, UseCallbackEffectWithArrowFun, UseMemoEffectWithArrowFun, UseRefEffectWithArrowFun, ContextApiTestOne} from "./test1"
-import {TimmerComponent, DisableEnableButon, ShowHideElement, DataBiningExample,DynamicAddChildComponent} from './taskPractice'
+import {TimmerComponent, DisableEnableButon, ShowHideElement, DataBiningExample,DynamicAddChildComponent, StateUnderDistrictExapmle, AddDynammicRowAndWithDelete, DarkTheme, DataTableInit} from './taskPractice'
 export const MainCounter = createContext();
 export function BaseComponentMainPageTwo(){
 	const[count, setCount] = useState(0);
@@ -38,6 +38,10 @@ export function BaseComponentMainPageTwo(){
 				{/* <ShowHideElement/> */}
 				{/* <DataBiningExample/> */}
 				{/* <DynamicAddChildComponent/> */}
+				{/* <StateUnderDistrictExapmle/> */}
+				{/* <AddDynammicRowAndWithDelete/> */}
+				<DarkTheme/>
+				<DataTableInit/>
 
 			</div>
 		</MainCounter.Provider>
