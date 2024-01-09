@@ -1,6 +1,6 @@
 import {createContext, useState} from 'react'
 import {ThisIsTheClassComponent, ThisIsClassComponentWithProps, ThisIsClassComponentStateWithOutConstructor, ThisIsClassComponentStateWithConstructor, ThisIsClassComponentWithButtonClickEvent, ThisIsFunctionalComponent, ThisIsArrowFunctionComponent, LiftingStateUpExample, LifeCycleMethodMounting, LifeCycleMethodUpdating, LifeCycleMethodUnmountingOne, ArrowFunctionWithUseEffet, UseCallbackEffectWithArrowFun, UseMemoEffectWithArrowFun, UseRefEffectWithArrowFun, ContextApiTestOne} from "./test1"
-import {TimmerComponent, DisableEnableButon, ShowHideElement, DataBiningExample,DynamicAddChildComponent, StateUnderDistrictExapmle, AddDynammicRowAndWithDelete, DarkTheme, DataTableInit, ReactModalInit} from './taskPractice'
+import {TimmerComponent, DisableEnableButon, ShowHideElement, DataBiningExample,DynamicAddChildComponent, StateUnderDistrictExapmle, AddDynammicRowAndWithDelete, DarkTheme, DataTableInit, ReactModalInit, CustomDataTable, Calculator} from './taskPractice'
 export const MainCounter = createContext();
 export function BaseComponentMainPageTwo(){
 	const[count, setCount] = useState(0);
@@ -42,7 +42,9 @@ export function BaseComponentMainPageTwo(){
 				{/* <AddDynammicRowAndWithDelete/> */}
 				<DarkTheme/>
 				{/* <DataTableInit/> */}
-				<ReactModalInit/>
+				{/* <ReactModalInit/> */}
+				{/* <CustomDataTable/> */}
+				<Calculator/>
 
 			</div>
 		</MainCounter.Provider>
